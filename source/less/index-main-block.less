@@ -1,0 +1,78 @@
+@import (reference) "mixins.less";
+@import (reference) "variables.less";
+@import (reference) "fonts.less";
+
+.main-block{
+	height: 600px;
+	background: url('../img/photo-background@1x.jpg') no-repeat;
+	background-size: cover;
+	position: relative;
+    z-index: 1;
+    border:1px solid black;
+    border-color: transparent;
+  
+.decorate{
+    svg{
+        &:nth-child(4),
+        &:nth-child(5){
+            fill:white;
+
+        }
+        &:nth-child(1){
+            fill:#81b3d2;
+        }
+        &:nth-child(3){
+            fill:#766357;
+        }
+
+    }
+
+    &:after{
+    content:'';
+    position: absolute;
+    border: 60px solid transparent;  
+    border-bottom: 0px solid white; 
+    border-left: 350px solid white;
+    top:539px;
+    left:295px;
+z-index: 3;
+    }
+    
+    &:before{
+    content:'';
+    position: absolute;
+    border: 60px solid transparent;  
+    border-bottom: 0px solid white; 
+    border-right: 350px solid white;
+    top:539px;
+    
+    left:570px;
+    z-index: 3;
+}
+}
+
+&:after{
+    content:'';
+    position: absolute;
+    border: 60px solid transparent;  
+    border-bottom: 0px solid white; 
+    border-left: 640px solid white;
+    top:539px;
+}
+&:before{
+    content:'';
+    position: absolute;
+    border: 60px solid transparent;  
+    border-bottom: 0px solid white; 
+    border-right: 640px solid white;
+    top:539px;
+    left:579px;
+}
+
+}
+
+
+
+
+
+

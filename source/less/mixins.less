@@ -1,0 +1,36 @@
+@import (reference) "variables.less";
+
+.zero (){
+	margin:0;
+	padding:0;
+}
+
+/*позиционирование элементов в main-block*/
+
+.triamble-pos( @p-top; @p-left;  ){
+	content:'';
+	width: 0px;
+    height: 0px;
+    border-style: solid;
+    position: absolute;
+    top:@p-top;
+    left:@p-left;
+}
+
+
+.position (@top; @bottom; @right; @left) {
+   top:@top;
+   bottom: @bottom;
+   right: @right;
+   left:@left;
+}
+
+.button (@btn-background; @font;  @f-size; @f-height; @f-weight; @color;){
+	.font-style(@font; @f-size; @f-size; @f-weight; @color;);
+	background: @btn-background;
+	text-transform: uppercase;
+	width: 300px;
+	height: 55px;
+	border: none;
+	border-radius:3px;
+}

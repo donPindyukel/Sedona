@@ -1,0 +1,87 @@
+@import (reference) "mixins.less";
+@import (reference) "variables.less";
+@import (reference) "fonts.less";
+
+footer{
+	.btns{
+		.button(@btn-background; @font;  @f-size; @f-height; @f-weight; @color;);
+		width: 40px;
+		height: 40px;
+		display: block;
+		margin-left: 10px;
+        text-decoration: none;
+        padding-top: 15px;
+        &:hover{
+        	background: #669ec0;
+
+        }	
+        &:active{
+        	background: #5496bd;
+
+            }
+    }	
+    
+
+    .social-btn{
+    	    li>.btns:after{
+			
+			.font-style(symbols-sedona; 20px; 10px; normal; white;);
+	        
+	        text-transform: none;
+            
+		    }
+
+		    li:nth-child(1)>.btns:after{
+		    	content: '\74';
+
+		    }
+		    li:nth-child(2)>.btns:after{
+		    	content: '\66';
+		    }
+		    li:nth-child(3)>.btns:after{
+		    	content: '\f39e';
+		    }
+
+
+	 .btns:active:after{
+	 	color:#83b3cf;
+	 }	 
+	}
+		
+		
+	ul>li{
+		text-transform: uppercase;
+		.font-style(@font; 21px; 26px; @f-weight; black;);
+	}
+
+	.links{
+            
+            li{
+
+               a{
+            	  .font-style(@font; 14px; 26px; normal; black;);
+            	  text-decoration: none;
+                  &:hover{
+                  	fill:#81b3d2;
+                  }
+                  &:active{
+                  	fill:#bdbbbc;
+                  }
+                  svg{
+                  	width: 40px;
+                  	height: 40px;
+                  }
+                }
+
+                
+               
+              
+
+            }
+
+     
+	}
+
+
+
+}

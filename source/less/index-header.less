@@ -1,0 +1,52 @@
+@import (reference) "mixins.less";
+@import (reference) "variables.less";
+@import (reference) "fonts.less";
+header{
+    ul{
+
+    list-style: none;
+    .zero();
+    text-align: center;
+    li{
+    	display:inline-block;
+    	.zero();
+    	vertical-align: middle;
+        width: 15%;
+        margin-left:2%;
+        margin-right: 1%; 
+        a{
+          .zero();
+          text-decoration: none;
+          .font-style(@font; @f-size; @f-height; @f-weight; @f-color);
+          text-transform: uppercase;
+          &:hover{
+            color: #81b3d2;
+          }
+          &:active{
+            color:#766357;
+          }
+          &:focus{
+           color:#b2b2b2;
+          }
+        }
+    
+     }
+     li:nth-child(3){
+     	position: relative;
+     	height: 60px;
+     	width: 137px;
+     	z-index: 2;
+     	a{
+     		position: absolute;
+     		top: 0px;
+     		left:0;
+
+     	  }	
+     }
+
+
+  }
+}  
+
+
+
